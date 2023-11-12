@@ -1,23 +1,17 @@
 import { Button, Card, Table } from 'antd';
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../components/header/Header';
+import CreateBill from '../components/cart/CreateBill';
 
 const CartPage = () => {
 
-
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const dataSource = [
         {
             key: '1',
-            name: 'Mike',
-            age: 32,
-            address: '10 Downing Street',
+
         },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            address: '10 Downing Street',
-        },
+
     ];
 
     const columns = [
@@ -39,11 +33,13 @@ const CartPage = () => {
     ];
 
 
+    console.log(isModalOpen);
+
     return (
         <>
             <Header />
             <div className="px-6">
-                <Table dataSource={dataSource} columns={columns} bordered pagination="{false}" />
+                <Table dataSource={dataSource} columns={columns} bordered pagination={false} />
 
                 <div className="cart-total flex justify-end mt-4">
                     <Card className='w-72'>
@@ -59,11 +55,12 @@ const CartPage = () => {
                             <b>Total</b>
                             <b className="">$595.00</b>
                         </div>
-                        <Button className='mt-4 w-full' type='primary' size='large'>Create Order</Button>
+                        <Button className='mt-4 w-full' type='primary' size='large' onClick={() => setIsModalOpen(true)}>Create Order</Button>
                     </Card>
                 </div>
-
             </div>
+
+            <CreateBill isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
         </>
     );
 };
