@@ -30,7 +30,7 @@ const Header = () => {
                     </a>
 
                     <Badge count={5} offset={[0, 6]} className='md:flex hidden'>
-                        <a href="/" className="menu-link flex flex-col">
+                        <a href="/cart" className="menu-link flex flex-col">
                             <ShoppingCartOutlined className='md:text-2xl text-xl' />
                             <span className='md:text-xs text-[10px]'>Cart</span>
                         </a>
