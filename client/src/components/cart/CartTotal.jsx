@@ -25,7 +25,7 @@ const CartTotal = () => {
                     <div className="flex items-center gap-x-1">
                         <Button type='primary' size='small' className='w-full flex items-center justify-center !rounded-full' icon={<MinusCircleOutlined />} />
 
-                        <span className="">1</span>
+                        <span className="font-bold">1</span>
 
                         <Button type='primary' size='small' className='w-full flex items-center justify-center !rounded-full' icon={<PlusCircleOutlined />} />
                     </div>
@@ -47,7 +47,7 @@ const CartTotal = () => {
                     <div className="flex items-center gap-x-1">
                         <Button type='primary' size='small' className='w-full flex items-center justify-center !rounded-full' icon={<MinusCircleOutlined />} />
 
-                        <span className="">1</span>
+                        <span className="font-bold">1</span>
 
                         <Button type='primary' size='small' className='w-full flex items-center justify-center !rounded-full' icon={<PlusCircleOutlined />} />
                     </div>
@@ -69,7 +69,7 @@ const CartTotal = () => {
                     <div className="flex items-center gap-x-1">
                         <Button type='primary' size='small' className='w-full flex items-center justify-center !rounded-full' icon={<MinusCircleOutlined />} />
 
-                        <span className="">1</span>
+                        <span className="font-bold">1</span>
 
                         <Button type='primary' size='small' className='w-full flex items-center justify-center !rounded-full' icon={<PlusCircleOutlined />} />
                     </div>
@@ -90,7 +90,7 @@ const CartTotal = () => {
                     <div className="flex items-center gap-x-1">
                         <Button type='primary' size='small' className='w-full flex items-center justify-center !rounded-full' icon={<MinusCircleOutlined />} />
 
-                        <span className="">1</span>
+                        <span className="font-bold">1</span>
 
                         <Button type='primary' size='small' className='w-full flex items-center justify-center !rounded-full' icon={<PlusCircleOutlined />} />
                     </div>

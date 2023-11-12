@@ -7,8 +7,8 @@ function App() {
   return (
     <>
       <Header />
-      <div className="home px-6 flex justify-between gap-10">
-        <div className="categories overflow-auto max-h-[calc(100vh_-_108px)] pb-10">
+      <div className="home px-6 flex md:flex-row flex-col justify-between gap-10 md:pb-0 pb-24">
+        <div className="categories overflow-auto max-h-[calc(100vh_-_108px)] md:pb-10">
           <Categories />
         </div>
 
