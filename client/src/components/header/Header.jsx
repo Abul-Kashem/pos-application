@@ -43,7 +43,7 @@ const Header = () => {
                         <span className='md:text-xs text-[10px]'>Invoices</span>
                     </Link>
 
-                    <Link to="/" className="menu-link flex flex-col">
+                    <Link to="/customers" className="menu-link flex flex-col">
                         <UserOutlined className='md:text-2xl text-xl' />
                         <span className='md:text-xs text-[10px]'>Customers</span>
                     </Link>
