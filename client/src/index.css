@@ -7,6 +7,7 @@
 body {
   margin: 0;
   font-family: 'Electrolize', sans-serif;
+  @apply bg-gray-50;
 }
 
 .ant-btn-primary {
@@ -25,6 +26,10 @@ body {
   }
 
   .categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .products::-webkit-scrollbar {
     display: none;
   }
 }
