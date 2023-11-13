@@ -1,6 +1,7 @@
-import { Button, Form, Input } from 'antd';
+import { Button, Carousel, Form, Input } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AuthCarousel from '../../components/auth/AuthCarousel';
 
 
 const Register = () => {
@@ -81,7 +82,37 @@ const Register = () => {
                         </Link>
                     </div>
                 </div>
-                <div className="className='xl:w-4/6 min-w-[800px]'">Right Side</div>
+                <div className="xl:w-4/6 lg:w-3/5 md:w-1/2 md:flex hidden bg-[#6c63ff] h-full">
+                    <div className="w-full h-full flex items-center">
+                        <div className="w-full">
+                            <Carousel className='!h-full px-6'>
+                                <AuthCarousel
+                                    img="/images/responsive.svg"
+                                    title="Responsive"
+                                    desc="Compatibility with All Device Sizes"
+                                />
+
+                                <AuthCarousel
+                                    img="/images/statistic.svg"
+                                    title="Statistics"
+                                    desc="Widely Maintained Statistics"
+                                />
+
+                                <AuthCarousel
+                                    img="/images/customer.svg"
+                                    title="Customer happiness"
+                                    desc="Satisfied Customers with the Product at the End of the Experience"
+                                />
+
+                                <AuthCarousel
+                                    img="/images/admin.svg"
+                                    title="Admin Panel"
+                                    desc="One-Stop Management"
+                                />
+                            </Carousel>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
