@@ -2,6 +2,7 @@ import { Button, Carousel, Form, Input } from 'antd';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import AuthCarousel from '../../components/auth/AuthCarousel';
+import Password from 'antd/es/input/Password';
 
 
 const Register = () => {
@@ -53,11 +54,24 @@ const Register = () => {
                         <Form.Item
                             label="Confirm Password"
                             name={"confirm_pass"}
+                            dependencies={["password"]}
                             rules={[
                                 {
                                     required: true,
                                     message: "Password Confirm Field Cannot Be Left Blank!"
-                                }
+                                },
+                                ({ getFieldValue }) => ({
+                                    validator(_, value) {
+                                        if (!value || getFieldValue("password") === value) {
+                                            return Promise.resolve();
+                                        }
+                                        return Promise.reject(
+                                            new Error(
+                                                "Passwords Have to Be the Same!"
+                                            )
+                                        )
+                                    }
+                                }),
                             ]}
                         >
                             <Input.Password />
@@ -114,7 +128,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
